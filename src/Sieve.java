@@ -19,7 +19,6 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
- * 
  * @author Matt
  *
  */
@@ -127,6 +126,17 @@ public class Sieve {
 			throw new IllegalStateException("Sieve has not yet been evaluated!");
 		}
 		return sieve.length + 1;
+	}
+	
+	/**
+	 * Gets the sieve array.
+	 * @return The sieve array.
+	 */
+	public int[] toArray() {
+		if(!evaluated) {
+			throw new IllegalStateException("Sieve has not yet been evaluated!");
+		}
+		return sieve;
 	}
 	
 	@Override
